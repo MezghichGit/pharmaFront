@@ -2,3 +2,13 @@
     <h2 align="center">Nos Caégories</h2>
   </div>
 
+  <table class="table">
+    <tr><th>ID</th><th>Libelle</th><th>Modifier</th><th>Supprimer</th></tr>
+    <tr *ngFor="let cat of categories">
+      <td>{{cat.id}}</td>
+      <td>{{cat.libelle}}</td>
+      <td><a class="btn btn-warning">Mise à jour</a></td>
+      <td><a class="btn btn-danger">Supprimer</a></td>
+    </tr>
+  </table>
+

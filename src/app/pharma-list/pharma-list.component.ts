@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PharmaService } from '../services/pharma.service';
 
 @Component({
   selector: 'app-pharma-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PharmaListComponent implements OnInit {
 
-  constructor() { }
+  pharmacies:any;
+  constructor(private pharmaService:PharmaService) { }
 
   ngOnInit(): void {
+    this.pharmaService.getAllPharma().subscribe(
+      data =>{
+        this.pharmacies = data;
+        console.log(this.pharmacies);
+      }
+    );
   }
 
 }
