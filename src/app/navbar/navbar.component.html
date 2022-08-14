@@ -7,16 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Pharmacies <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/listPharma">Pharmacies <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Catégories <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/listCategorie">Catégories <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Patients <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/listPatient">Patients <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/listPost">Posts <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
@@ -26,3 +26,5 @@
     </form>
   </div>
 </nav>
+
+<router-outlet></router-outlet>
