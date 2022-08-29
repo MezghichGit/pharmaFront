@@ -8,6 +8,10 @@ import { CategorieListComponent } from './categorie-list/categorie-list.componen
 import { PharmaListComponent } from './pharma-list/pharma-list.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AddPrefixPipe } from './pipes/add-prefix.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { PostListComponent } from './post-list/post-list.component';
     CategorieListComponent,
     PharmaListComponent,
     PatientListComponent,
-    PostListComponent
+    PostListComponent,
+    LoginComponent,
+    LogoutComponent,
+    RegistrationComponent,
+    AddPrefixPipe
   ],
   imports: [
     BrowserModule,
