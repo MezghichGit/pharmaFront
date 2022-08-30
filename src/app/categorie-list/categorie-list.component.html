@@ -7,8 +7,8 @@
     <tr *ngFor="let cat of categories">
       <td>{{cat.id}}</td>
       <td>{{cat.libelle}}</td>
-      <td><a class="btn btn-warning">Mise à jour</a></td>
-      <td><a class="btn btn-danger">Supprimer</a></td>
+      <td><a class="btn btn-warning"(click)="updateCategorie(cat.id)">Mise à jour</a></td>
+      <td><a class="btn btn-danger" (click)="deleteCategorie(cat.id)">Supprimer</a></td>
     </tr>
   </table>
 
