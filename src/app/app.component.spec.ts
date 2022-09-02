@@ -13,23 +13,23 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   });
-
+/*
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  it(`should have as title 'frontPharma'`, () => {
+*/
+  it(`App title should contians 'Sesame'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Flash Pharma v1.0');
+    expect(app.title).toEqual('Sesame');
   });
-
+/*
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('Flash Pharma v1.0');
-  });
+  });*/
 });
