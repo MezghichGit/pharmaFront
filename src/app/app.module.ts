@@ -15,6 +15,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AddPrefixPipe } from './pipes/add-prefix.pipe';
 import { CategorieEditComponent } from './categorie-edit/categorie-edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptorService } from './services/jwt-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorService,
+      multi: true
+      }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
