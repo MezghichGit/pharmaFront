@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.loginservice.authenticate(this.username, this.password).subscribe(
       data =>{
       if (data){
-        console.log(data);
+        //console.log(data);
         this.router.navigate(['/dashbaord'])
       } else{
         this.invalidLogin = true

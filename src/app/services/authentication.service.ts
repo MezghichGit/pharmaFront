@@ -38,7 +38,9 @@ export class AuthenticationService {
     return !(user === null)
   }
   logOut() {
-    sessionStorage.removeItem("token")
+    //sessionStorage.removeItem("token")
+    //sessionStorage.clear();
+    window.sessionStorage.removeItem('token')
   }
 
 
