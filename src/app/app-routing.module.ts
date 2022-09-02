@@ -9,17 +9,17 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { AuthGuardService } from './services/auth-guard.service';
 const routes: Routes = [
-  { path: 'listCategorie', component: CategorieListComponent },
-  { path: 'editCategorie/:id', component: CategorieEditComponent },
-  { path: 'listPharma', component: PharmaListComponent },
-  { path: 'listPatient', component: PatientListComponent },
-  { path: 'listPost', component: PostListComponent },
-  { path: 'dashbaord', component: DashboardComponent },
+  { path: 'listCategorie', component: CategorieListComponent, canActivate: [AuthGuardService] },
+  { path: 'editCategorie/:id', component: CategorieEditComponent, canActivate: [AuthGuardService] },
+  { path: 'listPharma', component: PharmaListComponent, canActivate: [AuthGuardService] },
+  { path: 'listPatient', component: PatientListComponent, canActivate: [AuthGuardService] },
+  { path: 'listPost', component: PostListComponent, canActivate: [AuthGuardService] },
+  { path: 'dashbaord', component: DashboardComponent , canActivate: [AuthGuardService]},
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuardService] },
 ];
 
 @NgModule({
