@@ -14,6 +14,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AddPrefixPipe } from './pipes/add-prefix.pipe';
 import { CategorieEditComponent } from './categorie-edit/categorie-edit.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CategorieEditComponent } from './categorie-edit/categorie-edit.componen
     LogoutComponent,
     RegistrationComponent,
     AddPrefixPipe,
-    CategorieEditComponent
+    CategorieEditComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
